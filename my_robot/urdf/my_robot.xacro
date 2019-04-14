@@ -26,14 +26,14 @@
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 
       <geometry>
-        <box size=".4 .2 .1"/>
+        <cylinder radius="0.2" length="0.1" />
       </geometry>
     </collision>
 
     <visual name='chassis_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <box size=".4 .2 .1"/>
+        <cylinder radius="0.2" length="0.1" />
       </geometry>
     </visual>
 
@@ -69,7 +69,7 @@
   </link>
 
 <gazebo reference="chassis">
-    <material>Gazebo/Blue</material>
+    <material>Gazebo/Yellow</material>
 </gazebo>
 
 <link name='left_wheel'>
@@ -95,7 +95,7 @@
 </link>
 
 <gazebo reference="left_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
 <link name='right_wheel'>
@@ -121,11 +121,11 @@
 
 
 <gazebo reference="right_wheel">
-    <material>Gazebo/Green</material>
+    <material>Gazebo/Black</material>
 </gazebo>
 
  <joint type="continuous" name="left_wheel_hinge">
-    <origin xyz="0 0.15 0" rpy="0 0 0"/>
+    <origin xyz="0 0.25 0" rpy="0 0 0"/>
     <child link="left_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -134,7 +134,7 @@
   </joint>
 
  <joint type="continuous" name="right_wheel_hinge">
-    <origin xyz="0 -0.15 0" rpy="0 0 0"/>
+    <origin xyz="0 -0.25 0" rpy="0 0 0"/>
     <child link="right_wheel"/>
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
@@ -165,7 +165,7 @@
   </link>
 
 <gazebo reference="camera">
-    <material>Gazebo/Red</material>
+    <material>Gazebo/Purple</material>
 </gazebo>
 
  <joint type="fixed" name="camera_joint">
