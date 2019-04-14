@@ -33,7 +33,7 @@ void process_image_callback(const sensor_msgs::Image img)
     // Request a stop when there's no white ball seen by the camera
 
     bool foundBall = false;
-    float lin_x = 0.0; 
+    float ang_z = 0.0; 
     for (int i = 0; i < img.height; i++) 
      for (int j = 0; j < img.step; j++) 
       {
@@ -41,18 +41,18 @@ void process_image_callback(const sensor_msgs::Image img)
             foundBall = true;
             
             if(j < (float)img.step / 3.0)
-              lin_x = -0.5;
+              ang_z = 0.5;
 
 
             if(j > 2.0 * (float)img.step / 3.0)
-              lin_x = 0.5;
+              ang_z = -0.5;
 
             break;
         }
       }
 
     if (foundBall)
-     drive_robot(lin_x, 0.5);
+     drive_robot(0.5, ang_z);
     else
      drive_robot(0.0,0.0);
 }

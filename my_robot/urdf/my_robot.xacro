@@ -87,11 +87,18 @@
 
 
     <visual name='left_wheel_visual'>
-      <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
           <cylinder radius="0.1" length="0.05" />
       </geometry>
     </visual>
+
+    <collision name='collision'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/> 
+      <geometry>
+        <cylinder radius="0.1" length="0.05" />
+      </geometry>
+    </collision>
 </link>
 
 <gazebo reference="left_wheel">
@@ -112,11 +119,18 @@
     </inertial>
 
     <visual name='right_wheel_visual'>
-      <origin xyz="0 0 0" rpy=" 0 1.5707 1.5707"/>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
       <geometry>
          <cylinder radius="0.1" length="0.05" />
       </geometry>
     </visual>
+
+    <collision name='collision'>
+      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/> 
+      <geometry>
+        <cylinder radius="0.1" length="0.05" />
+      </geometry>
+    </collision>
   </link>
 
 
@@ -162,6 +176,13 @@
          <box size=".05 .05 .05"/>
       </geometry>
     </visual>
+
+    <collision name='collision'>
+      <origin xyz="0 0 0" rpy=" 0 0 0"/> 
+      <geometry>
+        <box size=".05 .05 .05"/>
+      </geometry>
+    </collision>
   </link>
 
 <gazebo reference="camera">
