@@ -42,18 +42,18 @@ img.data[i * img.step + j + 2] == white_pixel) {
             foundBall = true;
             
             if(j < (float)img.step / 3.0)
-              ang_z = 0.5;
+              ang_z = 0.1;
 
 
             if(j > 2.0 * (float)img.step / 3.0)
-              ang_z = -0.5;
+              ang_z = -0.1;
 
             break;
         }
       }
 
     if (foundBall)
-     drive_robot(0.5, ang_z);
+     drive_robot(0.1, ang_z);
     else
      drive_robot(0.0,0.0);
 }
