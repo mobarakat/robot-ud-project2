@@ -35,7 +35,7 @@ void process_image_callback(const sensor_msgs::Image img)
     bool foundBall = false;
     float ang_z = 0.0; 
     for (int i = 0; i < img.height; i++) 
-     for (int j = 0; j < img.step; j = j + 4) 
+     for (int j = 0; j < img.step; j = j + 3) 
       {
         if (img.data[i * img.step + j] == white_pixel && img.data[i * img.step + j + 1] == white_pixel && 
 img.data[i * img.step + j + 2] == white_pixel) {
