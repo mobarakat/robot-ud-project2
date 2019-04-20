@@ -1,6 +1,8 @@
 # robot-ud-project2
 _Robotics Software Engineer Nanodegree Program: Project 2_
 
+[![Udacity - Robotics NanoDegree Program](https://s3-us-west-1.amazonaws.com/udacity-robotics/Extra+Images/RoboND_flag.png)](https://www.udacity.com/robotics)
+
 ## Description
 
 In this project, you should create two ROS packages inside your catkin_ws/src: the drive_bot and the ball_chaser. 
